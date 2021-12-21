@@ -6,3 +6,11 @@
 .background-image{
     background-image: url('https://th.bing.com/th/id/R.4b5d694899b6f5a0de821ea2668f60ca?rik=teQMUQctrU28vQ&riu=http%3a%2f%2fwww.wallpaperup.com%2fuploads%2fwallpapers%2f2013%2f04%2f02%2f69661%2f6adb34106beb3500fc654a75e88ffd7c.jpg&ehk=5jAlYI13AQBpyZ1r2jtPqhDiYzUoZ7lmG7ZG%2bUh48IA%3d&risl=&pid=ImgRaw&r=0');
 }
+
+.center{
+    margin: auto;
+    width: 60%;
+    /* border: 5px solid #ffff00; */
+    padding: 10px;
+
+}

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperimentsComponent implements OnInit {
 
-  experiments=["Mars soil sample", "Plant growth habitat", "Human bone density"];
+  experiments=["Liftoff and Ascent", "Exit atmosphere (but just barely)", "Float, weightless, for 3 minutes", "Descent and touchdown"];
 
   constructor() { }
 
