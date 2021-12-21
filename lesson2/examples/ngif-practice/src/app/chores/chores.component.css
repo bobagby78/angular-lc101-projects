@@ -16,3 +16,15 @@ img {
     display: block;
     margin: auto;
 }
+
+.strong{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:crimson;
+    text-align: center;
+}
+
+.advise{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:magenta;
+    text-align: center;
+}

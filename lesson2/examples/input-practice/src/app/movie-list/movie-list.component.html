@@ -5,4 +5,11 @@
     </ol>
     <hr>
 
+    <input #newMovie (keydown.enter)="addMovie(newMovie.value); newMovie.value=''" type="text" placeholder="Enter Movie Title Here">
+    <button (click)="addMovie(newMovie.value); newMovie.value=''">Add</button>
+    <button (click)="removeMovie(newMovie.value); newMovie.value=''">Remove</button>
+
+
+    <!-- <p>{{newMovie.value}}</p> -->
+
  </div>
