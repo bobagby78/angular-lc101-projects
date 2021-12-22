@@ -18,3 +18,13 @@ img {
 .crew {
     color: #3c79b8;
 }
+
+.remove{
+  background-color: red;
+  color: white
+}
+
+.green-light{
+  background-color: green;
+  color: white
+}

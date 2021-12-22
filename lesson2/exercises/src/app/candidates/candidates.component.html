@@ -5,35 +5,43 @@
         <div class="candidates col-3">
             <h2>Candidates</h2>
             <ol>
-                <li>Use *ngFor to automatically list all of the candidates' names.</li>
+                <li *ngFor='let candidate of candidates' (click)="selected = candidate" >{{candidate.name}}</li> <!--ngFor loops thru candidates array and displays member.name-->
             </ol>
         </div>
-    
+
         <div class="data col-3">
             <h2>Candidate Data</h2>
-            <p> <!-- Add an *ngIf to this tag to display the selected candidate's data-->
+            <p *ngIf="selected"> <!-- ngIf says if{candidate} throw a p-tag in there with candidate.name-->
                 {{selected.name}}
             </p>
-        </div>
-    
+          <ul *ngIf="selected">
+            <li>Age: {{selected.data.age}}</li>
+            <li>Mass: {{selected.data.mass}}</li>
+            <li>Sidekick: {{selected.data.sidekick}}</li>
+          </ul>
+<!--          <p>Age: {{selected.data.age}}</p>-->
+<!--          <p>Mass: {{selected.data.mass}}</p>-->
+
+         </div>
+
         <div class="centered col-3">
             <h2>Sidekick</h2>
             <!-- Use *ngIf and the correct placeholder to display a sidekick's image -->
-            <img src="{{placeholder}}" alt="OOPS! No image available."/>
+            <img *ngIf="selected" src="{{selected.image}}" alt="OOPS! No image available."/>
         </div>
 
         <div class="crew col-3">
             <h2>Selected Crew</h2>
             <ul>
-                <li>Use *ngFor to list the selected crew.</li>
+                <li *ngFor="let member of crew">{{member.name}}</li>
             </ul>
             <!-- Add a "Clear Crew List" button here. -->
         </div>
     </div>
     <hr>
     <div class = 'centered'>
-        <button>Clear Data & Image</button>
-        <!-- Add a "Send on Mission" button here. -->
+        <button class='remove'      (click)="selected=''">         Clear Data & Image</button>
+        <button class="green-light" (click)="addToCrew(selected)" >Green Light</button>
     </div>
 </div>
 
