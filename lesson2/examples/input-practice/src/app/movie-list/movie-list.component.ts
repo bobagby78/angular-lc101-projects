@@ -14,7 +14,8 @@ export class MovieListComponent implements OnInit {
    }
 
    addMovie(newMovie){
-      if(!this.movies.includes(newMovie)){
+      if(!this.movies.includes(newMovie) && newMovie !=='' && newMovie !== null){
+
          this.movies.push(newMovie);
       }
    }
